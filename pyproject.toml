@@ -1,0 +1,41 @@
+[tool.poetry]
+name = "ceia-ml-mushroom-classification"
+version = "0.1.0"
+description = "Trabajo práctico integrador de Aprendizaje de Máquinas - Clasificación de Hongos"
+authors = [
+    "Ariel Matias Cabello <arielmcabello@gmail.com>",
+    "Ignacio Agustin Costarelli <agustin@costarellisa.com.ar>",
+    "Alex Martín Curellich <alexcurellich@gmail.com>"
+]
+readme = "README.md"
+packages = [{include = "src"}]
+
+[tool.poetry.dependencies]
+python = ">=3.10,<3.13"
+pandas = "^2.0.0"
+numpy = "^1.24.0"
+scikit-learn = "^1.3.0"
+seaborn = "^0.12.0"
+matplotlib = "^3.7.0"
+scipy = "^1.10.0"
+kagglehub = "^0.2.0"
+category-encoders = "^2.6.0"
+
+[tool.poetry.group.dev.dependencies]
+jupyter = "^1.0.0"
+ipykernel = "^6.25.0"
+pytest = "^7.4.0"
+black = "^23.7.0"
+flake8 = "^6.0.0"
+isort = "^5.12.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.black]
+line-length = 88
+target-version = ['py38']
+
+[tool.isort]
+profile = "black"
